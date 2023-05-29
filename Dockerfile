@@ -19,6 +19,6 @@ RUN mkdir -p /app/node/.keys
 RUN echo -e "${PRIVATE_KEY}" > /app/node/.keys/id_rsa
 RUN echo -e "${PUBLIC_KEY}" > /app/node/.keys/id_rsa.pub
 
-COPY start.sh /start.sh
-RUN chmod +x start.sh
-CMD ["./start.sh"]
+COPY start_server.sh /start_server.sh
+RUN chmod +x start_server.sh
+CMD ["./start_server.sh"]
