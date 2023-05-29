@@ -19,4 +19,4 @@ RUN mkdir -p /app/node/.keys
 RUN echo -e "${PRIVATE_KEY}" > /app/node/.keys/id_rsa
 RUN echo -e "${PUBLIC_KEY}" > /app/node/.keys/id_rsa.pub
 
-CMD ["/app/presearch-node"]
+CMD ["server.js"]
