@@ -18,3 +18,5 @@ ENV PUBLIC_KEY=${PUBLIC_KEY}
 RUN mkdir -p /app/node/.keys
 RUN echo -e "${PRIVATE_KEY}" > /app/node/.keys/id_rsa
 RUN echo -e "${PUBLIC_KEY}" > /app/node/.keys/id_rsa.pub
+
+CMD ["presearch-node", "start"]
